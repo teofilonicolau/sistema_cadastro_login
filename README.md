@@ -7,6 +7,8 @@ Projeto para implementar um sistema de cadastro e login de usuários utilizando 
 - Registro de novos usuários com hash de senha utilizando bcrypt.
 - Login de usuários com verificação segura de senha..
 - ![image](https://github.com/user-attachments/assets/6cb25f36-4dc7-420f-892e-892b57325e52)
+- ![image](https://github.com/user-attachments/assets/da7da32f-7bd4-4dd1-8d76-794a6bef21d5)
+
 
 
 ## Tecnologias Utilizadas
