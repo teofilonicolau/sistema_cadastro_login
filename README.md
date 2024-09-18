@@ -52,6 +52,47 @@ Projeto para implementar um sistema de cadastro e login de usuários utilizando 
   ### O projeto inclui as seguintes tabelas:
   - Tabela users: Armazena informações dos usuários (id, username, password, email, telefone, created_at).
   - Tabela profiles (se aplicável): Pode ser usada para armazenar perfis de usuários com dados adiciona
+## Diagrama de Banco de Dados
+
+### Estrutura das Tabelas
+
+```plaintext
+Tabela: users
+-----------------------------
+| id        | int (PK)       |
+| username  | varchar(255)   |
+| password  | varchar(255)   |
+| email     | varchar(255)   |
+| telefone  | varchar(15)    |
+| created_at| datetime       |
+-----------------------------
+
+Tabela: profiles
+---------------------------------
+| user_id         | int (FK)       |
+| data_nascimento | date           |
+| foto_perfil     | varchar(255)   |
+---------------------------------
+```
+### Relacionamentos
+   - users (1) --- (1) profiles: Um usuário pode ter um único perfil associado.
+   - A tabela profiles contém uma chave estrangeira user_id que referencia o id da tabela users.
+     
+### Diagrama de Relacionamentos:
+```
++-----------+           +-----------+
+|  users    |           | profiles  |
++-----------+           +-----------+
+| id (PK)   |<----------| user_id   |
+| username  |           | data_nasc |
+| password  |           | foto_perfil|
+| email     |           +-----------+
+| telefone  |
+| created_at|
++-----------+
+
+```
+
 
 ## Manual do Usuário
 
